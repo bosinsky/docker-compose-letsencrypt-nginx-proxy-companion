@@ -314,6 +314,8 @@ server {
 		include /etc/nginx/vhost.d/default_location;
 		{{ end }}
 	}
+        #evogento2
+        client_max_body_size 120M;
 }
 
 {{ end }}
@@ -360,6 +362,8 @@ server {
 		include /etc/nginx/vhost.d/default_location;
 		{{ end }}
 	}
+        #evogento2
+        client_max_body_size 120M;
 }
 
 {{ if (and (not $is_https) (exists "/etc/nginx/certs/default.crt") (exists "/etc/nginx/certs/default.key")) }}
